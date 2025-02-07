@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+nav {
+  display: flex;
+  gap: 15px;
+  background: #004080;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+h1 {
+  color: #004080;
+}
