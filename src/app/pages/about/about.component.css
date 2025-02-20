@@ -1,0 +1,45 @@
+.about {
+  display: flex;
+  flex-direction: column;
+
+  .team-info {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: space-around;
+    align-items: center;
+
+    .info {
+      padding: 10px;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 8px;
+      align-items: center;
+      width: 300px;
+      height: 180px;
+    }
+    .big {
+      width: 400px;
+      height: 300px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  h5,
+  h2 {
+    margin: 3px 0;
+  }
+
+  h3 {
+    color: #585ab3;
+    margin: 3px 0;
+  }
+}

@@ -1,16 +1,69 @@
-nav {
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap");
+
+app-root {
   display: flex;
-  gap: 15px;
-  background: #004080;
-  padding: 10px;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px 40px;
+  font-family: "Heebo", sans-serif;
+  background-color: #f2f4f6;
+  color: #23297f;
+  direction: rtl;
 }
 
 h1 {
   color: #004080;
+  font-family: "Heebo", sans-serif;
+}
+
+.page {
+  padding: 10px 40px;
+}
+
+button {
+  height: 38px;
+  line-height: 12px;
+  padding: 5px 10px;
+  text-align: center;
+  border: 2px solid #23297f;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: sans-serif;
+  background-color: transparent;
+  border-color: #23297f;
+  color: #23297f;
+}
+.filled-button {
+  background-color: #23297f;
+  color: #ffffff;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #585ab3;
+  border-color: #585ab3;
+  color: #ffffff;
+}
+
+a {
+  padding: 5px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-transform: none;
+  color: #23297f;
+}
+
+a:hover {
+  color: #585ab3;
+  cursor: pointer;
 }

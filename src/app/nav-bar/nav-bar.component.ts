@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+
 @Component({
-  selector: 'app-home',
+  selector: 'app-nav-bar',
   imports: [RouterModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+  templateUrl: './nav-bar.component.html',
+  styleUrl: './nav-bar.component.css'
 })
-export class HomeComponent {
+export class NavBarComponent {
   baseUrl = window.location.origin;
 
   constructor(readonly location: Location) {
