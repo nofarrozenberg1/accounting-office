@@ -1,1 +1,8 @@
-<p>links works!</p>
+<div class="page links">
+  <h1>קישורים שימושיים</h1>
+  <div class="list">
+    <h2 *ngFor="let link of links">
+      <a [href]="link.link" target="_blank">{{ link.name }}</a>
+    </h2>
+  </div>
+</div>

@@ -1,22 +1,25 @@
-<div class="responsibilities">
-  <div class="subjects">
-    <div
-      *ngFor="let item of items"
-      (mouseover)="selectItem(item)"
-      (focus)="selectItem(item)"
-    >
-      <h4>{{ item.title }}</h4>
+<div class="page responsibilities">
+  <h1>שירותי המשרד</h1>
+  <div class="content">
+    <div class="subjects">
+      <div
+        *ngFor="let item of items"
+        (mouseover)="selectItem(item)"
+        (focus)="selectItem(item)"
+        class="itemTitle"
+      >
+        <i [class]="item.icon + ' fa-2x'"></i>
+        <h2>{{ item.title }}</h2>
+      </div>
     </div>
-  </div>
-  <div *ngIf="selectedItem" class="details">
-    <h2>{{ selectedItem.title }}</h2>
-    <h4>{{ selectedItem.description }}</h4>
-    <h4>חלק מהשירותים הניתנים בתחום זה</h4>
-    <div *ngFor="let point of selectedItem.points">
-      <span>
-        <i class="fas fa-solid fa-circle"></i>
+    <div *ngIf="selectedItem" #scrollContainer (scroll)="onScroll()" class="item">
+      <h2>{{ selectedItem.title }}</h2>
+      <h4>{{ selectedItem.description }}</h4>
+      <h4>חלק מהשירותים הניתנים בתחום זה</h4>
+      <div *ngFor="let point of selectedItem.points" class="points">
+        <i class="fas fa-solid fa-circle custom-icon"></i>
         <h5>{{ point }}</h5>
-      </span>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,21 @@
+.links {
+  display: flex;
+  flex-direction: column;
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+      margin: 15px;
+      width: fit-content;
+      cursor: pointer;
+    }
+
+    h2:hover {
+      color: #585ab3;
+      cursor: pointer;
+    }
+  }
+}

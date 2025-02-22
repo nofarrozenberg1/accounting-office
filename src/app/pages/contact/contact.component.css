@@ -1,0 +1,88 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+
+    .info-line {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+    }
+
+    form {
+      padding: 40px;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      width: 500px;
+      min-width: 500px;
+      overflow-y: auto;
+      gap: 10px;
+      position: relative;
+
+      h4 {
+        margin: 5px 0;
+        font-family: "Heebo", sans-serif;
+      }
+
+      h5 {
+        margin: 10px 0;
+        position: absolute;
+        bottom: 0;
+      }
+
+      .error {
+        color: red;
+      }
+
+      button {
+        margin-top: 15px;
+        width: 120px;
+      }
+
+      i {
+        margin-top: 15px;
+      }
+    }
+
+    .disabled {
+      background-color: #585ab3;
+      border-color: #585ab3;
+      cursor: auto;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h4 {
+        margin: 3px;
+      }
+
+      .address {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      iframe {
+        width: 540px;
+        min-width: 540px;
+        height: 470;
+
+        ::ng-deep gmpx-split-layout {
+          --gmpx-fixed-panel-height-column-layout: 50%;
+        }
+      }
+    }
+  }
+}

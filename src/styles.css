@@ -67,3 +67,22 @@ a:hover {
   color: #585ab3;
   cursor: pointer;
 }
+
+input {
+  height: 30px;
+  padding: 0 10px;
+  font-family: "Heebo", sans-serif;
+  font-size: 14px;
+}
+
+textarea {
+  height: 60px;
+  border-radius: 6px;
+  padding: 10px;
+  font-family: "Heebo", sans-serif;
+  font-size: 14px;
+}
+
+.ml-3{
+  margin-left: 10px;
+}
