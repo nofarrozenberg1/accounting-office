@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
   Calculator, FileText, TrendingUp, Receipt, Handshake,
   ChevronDown, Phone, MapPin, Mail, Users, Award, Clock,
@@ -637,8 +637,8 @@ export default function HomePage() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-slate-100">
-            <div className="px-4 py-4 space-y-3">
+          <div className="md:hidden bg-white border-t border-slate-100 absolute left-0 right-0 top-full z-50 shadow-lg">
+            <div className="px-4 py-4 space-y-1">
               {[
                 { label: t.nav.home, id: 'hero' },
                 { label: t.nav.about, id: 'about' },
@@ -646,9 +646,16 @@ export default function HomePage() {
                 { label: t.nav.contact, id: 'contact' }
               ].map((item) => (
                 <button
+                  type="button"
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`block w-full py-3 text-slate-600 hover:text-[#0f172a] font-medium border-b border-slate-100 ${isRTL ? 'text-right' : 'text-left'}`}
+                  onClick={() => {
+                    const element = document.getElementById(item.id);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    setMobileMenuOpen(false);
+                  }}
+                  className={`block w-full py-4 px-2 text-slate-600 hover:text-[#0f172a] hover:bg-slate-50 font-medium border-b border-slate-100 cursor-pointer ${isRTL ? 'text-right' : 'text-left'}`}
                 >
                   {item.label}
                 </button>
