@@ -129,7 +129,7 @@ const stats = [
 
 const translations = {
   he: {
-    nav: { home: 'ראשי', about: 'אודות', services: 'שירותים', contact: 'צור קשר', cta: 'צור קשר' },
+    nav: { home: 'ראשי', about: 'אודות', services: 'שירותים', contact: 'צור קשר', cta: 'בואו נדבר' },
     hero: {
       badge: 'מעל 30 שנות מצוינות',
       title: 'אמיר רוזנברג ושות׳',
@@ -191,7 +191,7 @@ const translations = {
     }
   },
   en: {
-    nav: { home: 'Home', about: 'About', services: 'Services', contact: 'Contact', cta: 'Contact Us' },
+    nav: { home: 'Home', about: 'About', services: 'Services', contact: 'Contact', cta: 'Get Started' },
     hero: {
       badge: 'Over 30 Years of Excellence',
       title: 'Amir Rozenberg & Co.',
@@ -636,33 +636,26 @@ export default function HomePage() {
         </div>
 
         {/* Mobile Menu */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white border-t border-slate-100"
-            >
-              <div className="px-4 py-4 space-y-3">
-                {[
-                  { label: t.nav.home, id: 'hero' },
-                  { label: t.nav.about, id: 'about' },
-                  { label: t.nav.services, id: 'services' },
-                  { label: t.nav.contact, id: 'contact' }
-                ].map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => scrollToSection(item.id)}
-                    className={`block w-full py-3 text-slate-600 hover:text-[#0f172a] font-medium border-b border-slate-100 ${isRTL ? 'text-right' : 'text-left'}`}
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-slate-100">
+            <div className="px-4 py-4 space-y-3">
+              {[
+                { label: t.nav.home, id: 'hero' },
+                { label: t.nav.about, id: 'about' },
+                { label: t.nav.services, id: 'services' },
+                { label: t.nav.contact, id: 'contact' }
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`block w-full py-3 text-slate-600 hover:text-[#0f172a] font-medium border-b border-slate-100 ${isRTL ? 'text-right' : 'text-left'}`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
